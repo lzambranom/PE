@@ -7,7 +7,7 @@ User Function MT120F()
 Local cPedido  	:= PARAMIXB
 Local cTemp 	:= ""
 
-dBselectArea('SC7')
+dBselectArea('SC7')//
 dbSetOrder(1)
 dbSeek(cPedido)
 //Codigo do usuario ...
