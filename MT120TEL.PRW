@@ -23,9 +23,7 @@ user function MT120TEL()
 	Local l120Deleta	:= .F.
 	//Public _cXNomePro   := SC7->C7_XNOME
 	Public cXObserv     := SC7->C7_XOBSG
-	//Public cXObserv1    := ''
-	//Public cXObserv     := '                   '
-    
+	
 	Do Case
 	Case aRotina[nOpcX][4] == 2
 		l120Visual := .T.
@@ -41,7 +39,7 @@ user function MT120TEL()
 
     
     @ 76,aPosGet[2,1] SAY Alltrim(RetTitle(cNomField)) of oNewDialog pixel size 060,006
-    @ 75,aPosGet[2,1]+64 MSGET cXObserv SIZE 250,06 PICTURE PesqPict("SC7",cNomField) WHEN  (l120Inclui .And. VisualSX3(cNomField)) OF oNewDialog PIXEL SIZE 080,006
+    @ 75,aPosGet[2,1]+64 MSGET cXObserv SIZE 250,06 PICTURE PesqPict("SC7",cNomField) WHEN  (l120Inclui .And. VisualSX3(cNomField) .or. l120Altera) OF oNewDialog PIXEL SIZE 080,006
    	//@ 75,aPosGet[2,1]+64 MSGET cXObserv SIZE 250,06 PICTURE PesqPict("SC7",cNomField) OF oNewDialog PIXEL SIZE 080,006
    	
 	aAdd(aDlgFields,{cNomField,"cXObserv"})
